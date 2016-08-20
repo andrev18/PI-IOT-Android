@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="24dp"
+    android:paddingRight="24dp"
+    android:paddingBottom="24dp">
+
+    <EditText
+        android:inputType="phone"
+        android:singleLine="true"
+        android:nextFocusDown="@+id/text_port"
+        android:hint="@string/ip"
+        android:id="@+id/text_ip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:layout_below="@id/text_ip"
+        android:singleLine="true"
+        android:inputType="phone"
+        android:imeOptions="actionDone"
+        android:id="@+id/text_port"
+        android:hint="@string/port"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <LinearLayout
+        android:paddingTop="10dp"
+        android:weightSum="2"
+        android:orientation="vertical"
+        android:clickable="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignBottom="@id/text_port"
+        android:background="#FFFFFF"
+        android:visibility="gone"
+        android:id="@+id/text_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:textColor="#000000"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="IP Address - Add the IP address of your server."/>
+
+        <TextView
+            android:textColor="#000000"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="PORT - Add the Port number of your server."/>
+    </LinearLayout>
+
+</RelativeLayout>

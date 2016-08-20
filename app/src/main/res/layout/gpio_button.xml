@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#DFDFDF"
+    android:padding="5dp">
+
+    <TextView
+        android:textColor="#000000"
+        android:padding="5dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/gpio_id"
+        android:text="GPIO 3"
+        android:textSize="@dimen/gpio_id_text_size"
+        android:textStyle="bold"/>
+
+    <LinearLayout
+        android:background="#DFDFDF"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="2">
+
+        <FrameLayout
+            android:id="@+id/positive_btn"
+            android:clickable="true"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/positive_btn"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/btn_height"
+            android:layout_weight="1">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="True"
+                android:textSize="20sp"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                />
+        </FrameLayout>
+        <FrameLayout
+            android:id="@+id/negative_btn"
+            android:clickable="true"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/negative_btn"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/btn_height"
+            android:layout_weight="1">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="False"
+                android:textSize="20sp"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                />
+        </FrameLayout>
+    </LinearLayout>
+</LinearLayout>
